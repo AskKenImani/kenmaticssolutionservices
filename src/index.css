@@ -11,3 +11,138 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --background: rgb(219, 214, 185);
+  --text: #1a1a1a;
+  --header-bg: #f5f5f5;
+}
+
+[data-theme='dark'] {
+  --background: #1a1a1a;
+  --text: #ffffff;
+  --header-bg: #333;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Source Code Pro', monospace;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+@media (max-width: 1024px) {
+  .navbar ul {
+    gap: 1.2rem;
+  }
+
+  .projects,
+  .about,
+  .services,
+  .reviews,
+  .contact,
+  .home {
+    font-size: 1.6rem;
+    padding: 1.5rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar li {
+    width: 100%;
+  }
+
+  .contact,
+  .reviews,
+  .about,
+  .services,
+  .projects,
+  .home {
+    font-size: 1.4rem;
+    padding: 1.2rem;
+  }
+
+  .card {
+    padding: 0.8rem;
+  }
+
+  .form input,
+  .form textarea {
+    padding: 0.8rem;
+  }
+
+  .input {
+    font-size: 0.9rem;
+  }
+
+  .button {
+    font-size: 0.95rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .footer {
+    font-size: 0.9rem;
+    padding: 1.5rem;
+  }
+
+  .socialIcons {
+    gap: 1rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact,
+  .reviews,
+  .about,
+  .services,
+  .projects,
+  .home {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .input {
+    font-size: 0.85rem;
+  }
+
+  .card {
+    font-size: 0.95rem;
+  }
+
+  .navbar {
+    padding: 0.8rem;
+  }
+
+  .navbar a {
+    font-size: 1rem;
+  }
+}
+

@@ -1,0 +1,29 @@
+.footer {
+    background: rgb(37, 36, 30);
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 3rem;
+  }
+  
+  .time {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .socialIcons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .socialIcons a {
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  .socialIcons a:hover {
+    color: #ffd700;
+  }
+  
