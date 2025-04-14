@@ -2,7 +2,6 @@ import React from 'react';
 import ContactForm from '../components/ContactForm';
 import ReviewForm from '../components/ReviewForm';
 import styles from '../styles/Contact.module.css';
-import formStyles from '../styles/FormElements.module.css';
 
 const Contact = () => {
   return (
