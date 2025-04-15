@@ -1,8 +1,42 @@
 .about {
-    padding: 2rem;
-    text-align: center;
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: var(--background);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.about p {
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 900px;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .about h2 {
     font-size: 2rem;
-    background-color: var(--background);
-    color: var(--text);
   }
-  
+
+  .about p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about h2 {
+    font-size: 1.6rem;
+  }
+
+  .about p {
+    font-size: 0.9rem;
+  }
+}

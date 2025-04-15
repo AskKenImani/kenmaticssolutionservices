@@ -1,10 +1,17 @@
 .contactSection {
-  padding: 2rem;
-  font-size: 2rem;
+  padding: 3rem 1rem;
+  font-size: 1.5rem;
   color: #1d3557;
   border-radius: 8px;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: auto;
+  text-align: center;
+}
+
+.contactSection h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1d3557;
 }
 
 .formsContainer {
@@ -13,7 +20,9 @@
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
-  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .formBox {
@@ -21,33 +30,64 @@
   background: white;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.formBox h3 {
+  font-size: 1.5rem;
+  color: #1d3557;
+  margin-bottom: 1rem;
 }
 
 .form input,
 .form textarea {
   display: block;
   width: 100%;
-  margin: 10px 0;
-  padding: 10px;
+  margin: 12px 0;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #1d3557;
+  outline: none;
 }
 
 button {
-  padding: 10px;
+  padding: 12px 20px;
   background: #1d3557;
   color: white;
   border: none;
+  border-radius: 6px;
+  font-weight: bold;
   cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #16324f;
 }
 
 .success {
   color: green;
   font-weight: bold;
+  margin-top: 10px;
+  font-size: 1rem;
+  text-align: left;
 }
 
 @media (max-width: 768px) {
   .formsContainer {
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
+  }
+
+  .formBox {
+    width: 100%;
   }
 }

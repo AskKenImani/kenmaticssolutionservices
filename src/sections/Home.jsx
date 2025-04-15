@@ -19,7 +19,7 @@ const Home = () => {
         <video 
           autoPlay 
           loop 
-          muted 
+          unmuted 
           playsInline 
           className={styles.video}
         >
