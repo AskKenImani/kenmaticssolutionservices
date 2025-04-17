@@ -39,7 +39,7 @@
 }
 
 .navLinks a {
-  color: black;
+  color: whitesmoke;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease, border-bottom 0.3s ease;

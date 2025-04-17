@@ -7,58 +7,83 @@
   
   .reviews h2 {
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
   
-  .reviews p {
-    font-size: 1rem;
-    color: #333;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-    max-width: 800px;
+  .carouselContainer {
+    position: relative;
+    max-width: 600px;
     margin: 0 auto;
+    overflow: hidden;
   }
   
-  li {
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 1rem;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
-    text-align: left;
-    transition: transform 0.2s ease;
+  .carousel {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
   }
   
-  li:hover {
-    transform: translateY(-4px);
+  .reviewCard {
+    flex: 0 0 100%;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    left: 0;
+    right: 0;
   }
   
-  li p {
-    font-size: 1rem;
-    line-height: 1.6;
+  .active {
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+  }
+  
+  .stars {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    font-size: 1.2rem;
     margin: 0.5rem 0;
+    color: #ccc;
   }
   
-  li p:first-child {
-    font-weight: bold;
+  .filled {
+    color: gold;
+  }
+  
+  .date {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 0.5rem;
+  }
+  
+  .navButton {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
     color: #1d3557;
+    cursor: pointer;
+    padding: 0 1rem;
+    transition: color 0.3s ease;
+    z-index: 2;
   }
   
+  .navButton:hover {
+    color: #e63946;
+  }
+  
+  /* Responsive */
   @media (max-width: 768px) {
     .reviews h2 {
       font-size: 2rem;
     }
   
-    li {
-      padding: 1rem;
-    }
-  
-    li p {
-      font-size: 0.95rem;
+    .reviewCard {
+      padding: 1.5rem;
     }
   }
   

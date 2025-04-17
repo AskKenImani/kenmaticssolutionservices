@@ -25,6 +25,13 @@ const serviceList = [
 ];
 
 const Services = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="services" data-aos="slide-right" className={styles.services}>
       <h2>Our Services</h2>
@@ -33,6 +40,9 @@ const Services = () => {
           <div key={index} className={styles.card}>
             <h3>{service.title}</h3>
             <p>{service.description}</p>
+            <button className={styles.ctaButton} onClick={scrollToContact}>
+              Contact Us Today
+            </button>
           </div>
         ))}
       </div>
