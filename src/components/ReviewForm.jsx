@@ -5,6 +5,7 @@ import styles from '../styles/ReviewForm.module.css';
 
 const ReviewForm = () => {
   const [name, setName] = useState('');
+  const [brand, setBrand] = useState('');
   const [comment, setComment] = useState('');
   const [rating, setRating] = useState(0);
   const [success, setSuccess] = useState(false);
@@ -12,7 +13,7 @@ const ReviewForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!name || !comment || rating === 0) {
+    if (!name || !brand || !comment || rating === 0) {
       alert('Please fill in all fields and select a star rating.');
       return;
     }
@@ -20,14 +21,19 @@ const ReviewForm = () => {
     try {
       await addDoc(collection(db, 'reviews'), {
         name,
+        brand,
         comment,
         rating,
         createdAt: Timestamp.now(),
       });
+
       setSuccess(true);
       setName('');
+      setBrand('');
       setComment('');
       setRating(0);
+
+      setTimeout(() => setSuccess(false), 3000); // Hide success message after 3s
     } catch (error) {
       console.error('Error adding review:', error);
     }
@@ -35,25 +41,35 @@ const ReviewForm = () => {
 
   return (
     <div className={styles.reviewForm}>
-      <h3>Leave a Review</h3>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Your name"
           value={name}
           onChange={(e) => setName(e.target.value)}
+          required
+        />
+        <input
+          type="text"
+          placeholder="Your brand name"
+          value={brand}
+          onChange={(e) => setBrand(e.target.value)}
+          required
         />
         <textarea
           placeholder="Your review"
           value={comment}
           onChange={(e) => setComment(e.target.value)}
-        ></textarea>
+          required
+        />
         <div className={styles.stars}>
           {[1, 2, 3, 4, 5].map((num) => (
             <span
               key={num}
               className={rating >= num ? styles.filled : ''}
               onClick={() => setRating(num)}
+              role="button"
+              aria-label={`Rate ${num} star`}
             >
               ★
             </span>

@@ -72,6 +72,7 @@ const Reviews = () => {
                 className={`${styles.reviewCard} ${index === current ? styles.active : ''}`}
               >
                 <p><strong>{review.name}</strong></p>
+                {review.brand && <p className={styles.brand}>{review.brand}</p>}
                 <p>"{review.comment}"</p>
                 {renderStars(review.rating)}
                 <p className={styles.date}>{formatDate(review.createdAt)}</p>
