@@ -1,4 +1,3 @@
-// components/BackToTop.jsx
 import React, { useEffect, useState } from 'react';
 import '../styles/Home.module.css';
 

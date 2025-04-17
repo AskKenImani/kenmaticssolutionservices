@@ -76,7 +76,6 @@
     color: #e63946;
   }
   
-  /* Responsive */
   @media (max-width: 768px) {
     .reviews h2 {
       font-size: 2rem;

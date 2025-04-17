@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { db } from '../firebase/firebaseConfig';
 import { collection, getDocs } from 'firebase/firestore';
 import styles from '../styles/Reviews.module.css';
@@ -34,19 +34,26 @@ const Reviews = () => {
     </div>
   );
 
-  const nextSlide = () => setCurrent((prev) => (prev + 1) % reviews.length);
-  const prevSlide = () => setCurrent((prev) => (prev - 1 + reviews.length) % reviews.length);
+  const nextSlide = useCallback(() => {
+    setCurrent((prev) => (prev + 1) % reviews.length);
+  }, [reviews.length]);
+
+  const prevSlide = useCallback(() => {
+    setCurrent((prev) => (prev - 1 + reviews.length) % reviews.length);
+  }, [reviews.length]);
 
   useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      nextSlide();
-    }, 5000); // Auto-scroll every 5s
+    if (reviews.length > 0) {
+      intervalRef.current = setInterval(() => {
+        nextSlide();
+      }, 5000);
+    }
 
     return () => clearInterval(intervalRef.current);
-  }, [reviews]);
+  }, [nextSlide, reviews.length]);
 
   const handleManual = (direction) => {
-    clearInterval(intervalRef.current); // pause auto-scroll when user interacts
+    clearInterval(intervalRef.current);
     direction === 'next' ? nextSlide() : prevSlide();
   };
 
