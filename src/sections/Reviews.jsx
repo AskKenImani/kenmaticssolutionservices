@@ -58,7 +58,7 @@ const Reviews = () => {
   };
 
   return (
-    <section id="reviews" className={styles.reviews}>
+    <section id="reviews" data-aos="fade-up" className={styles.reviews}>
       <h2>Client Reviews</h2>
       {reviews.length === 0 ? (
         <p>Loading reviews...</p>

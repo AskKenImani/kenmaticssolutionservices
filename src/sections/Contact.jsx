@@ -5,7 +5,7 @@ import styles from '../styles/Contact.module.css';
 
 const Contact = () => {
   return (
-    <section id="contact" data-aos="fade-up" className={styles.contactSection}>
+    <section id="contact" data-aos="slide-right" className={styles.contactSection}>
       <h2 style={{ textAlign: 'center' }}>Contact & Reviews</h2>
       <div className={styles.formsContainer}>
         <div className={styles.formBox}>
