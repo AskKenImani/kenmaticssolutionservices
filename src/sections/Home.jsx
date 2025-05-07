@@ -18,7 +18,8 @@ const Home = () => {
       <div className={styles.videoContainer}>
         <video 
           autoPlay 
-          loop 
+          loop
+          controls
           unmuted 
           playsInline 
           className={styles.video}
