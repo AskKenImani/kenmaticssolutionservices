@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import dayjs from 'dayjs';
+import VisitorCounter from './VisitorCounter'
 import { FaLinkedin, FaWhatsapp, FaTwitter, FaInstagram, FaTiktok } from 'react-icons/fa';
 import styles from '../styles/Footer.module.css';
 
@@ -15,6 +16,7 @@ const Footer = () => {
 
   return (
     <footer className={styles.footer}>
+      < VisitorCounter />
       <p className={styles.time}>{currentTime}</p>
       <div className={styles.socialIcons}>
         <a href="https://linkedin.com/in/kehinde-imani" target="_blank" rel="noreferrer"><FaLinkedin /></a>
