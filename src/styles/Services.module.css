@@ -61,9 +61,39 @@
 }
 
 
-@media (max-width: 480px) {
+@media (max-width: 1024px) {
   .services {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    padding: 2rem 1rem;
+  }
+
+  .card {
+    font-size: 0.95rem;
+    padding: 1.2rem;
+  }
+
+  .card h3 {
+    font-size: 1.15rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    font-size: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 1rem;
+    font-size: 0.9rem;
   }
 
   .card h3 {
@@ -71,6 +101,27 @@
   }
 
   .card p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 }
+
+@media (max-width: 480px) {
+  .services {
+    font-size: 1.4rem;
+    padding: 1.2rem 1rem;
+  }
+
+  .card h3 {
+    font-size: 1.05rem;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+  }
+
+  .ctaButton {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+

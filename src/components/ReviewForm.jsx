@@ -33,7 +33,7 @@ const ReviewForm = () => {
       setComment('');
       setRating(0);
 
-      setTimeout(() => setSuccess(false), 3000); // Hide success message after 3s
+      setTimeout(() => setSuccess(false), 3000);
     } catch (error) {
       console.error('Error adding review:', error);
     }

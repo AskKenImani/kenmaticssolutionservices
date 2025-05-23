@@ -6,6 +6,7 @@
   border: 1px solid #ccc;
   border-radius: 6px;
   transition: border-color 0.3s ease;
+  box-sizing: border-box;
 }
 
 .input:focus {
@@ -28,4 +29,18 @@
 
 .button:hover {
   background-color: #16324f;
+}
+
+@media (max-width: 480px) {
+  .input {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.95rem;
+  }
+
+  .button {
+    width: 100%;
+    padding: 0.65rem;
+    font-size: 0.95rem;
+  }
 }
