@@ -17,6 +17,13 @@ const projectList = [
     reviewLink: '#reviews'
   },
   {
+    title: 'E-commerce Website for All',
+    image: '/assets/projects/genecomm.png',
+    website: 'https://genecomm.netlify.app/',
+    description: 'Built a complete frontend and backend website with React.js and Firebase, a landing page and full ecommerce features, products can be upload, manage sales, track orders and save customers data.',
+    reviewLink: '#reviews'
+  },
+  {
     title: 'Gifdera Store Logo Design',
     image: '/assets/projects/gifdera logo.jpg',
     description: 'Developed a clean, bold logo design for a modern brand with vibrant visual identity.',
