@@ -45,7 +45,7 @@ const projectList = [
 
 const Projects = () => {
   return (
-    <section id="projects" data-aos="slide-left" data-aos-duration="5000" data-aos-delay="500" className={styles.projects}>
+    <section id="projects" data-aos="fade-up" data-aos-duration="5000" data-aos-delay="500" className={styles.projects}>
       <h2>Projects</h2>
       <p>Here are a few recent projects we've delivered for clients around the world.</p>
 

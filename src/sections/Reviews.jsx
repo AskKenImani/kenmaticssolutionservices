@@ -58,7 +58,7 @@ const Reviews = () => {
   };
 
   return (
-    <section id="reviews" data-aos="fade-up" data-aos-duration="2500" data-aos-delay="500" className={styles.reviews}>
+    <section id="reviews" data-aos="slide-right" data-aos-duration="2500" data-aos-delay="500" className={styles.reviews}>
       <h2>Client Reviews</h2>
       {reviews.length === 0 ? (
         <p>Loading reviews...</p>
