@@ -46,7 +46,8 @@
 
 .image {
   width: 100%;
-  height: auto;
+  max-height: 500px;
+  object-fit: cover;
   border-radius: 0.75rem;
   margin-bottom: 1rem;
 }
@@ -93,6 +94,10 @@
   .card p {
     font-size: 0.9rem;
   }
+
+  .image {
+    max-height: 400px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -129,6 +134,10 @@
   .review {
     font-size: 0.9rem;
   }
+
+  .image {
+    max-height: 300px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -160,6 +169,10 @@
 
   .review {
     font-size: 0.85rem;
+  }
+
+  .image {
+    max-height: 250px;
   }
 }
 

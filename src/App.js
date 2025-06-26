@@ -12,6 +12,8 @@ import Reviews from './sections/Reviews';
 import Contact from './sections/Contact';
 import BackToTop from './components/BackToTop';
 
+
+
 function App() {
   useEffect(() => {
     AOS.init({ duration: 1000 });

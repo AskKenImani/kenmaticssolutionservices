@@ -3,7 +3,7 @@ import styles from '../styles/About.module.css';
 
 const About = () => {
   return (
-    <section id="about" data-aos="fade-up" className={styles.about}>
+    <section id="about" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500" className={styles.about}>
       <h2>About Us</h2>
       <p>
         At <strong>Kenmatics Solution Services</strong>, we're not just a digital agency, we're your creative and technical growth partners. Born out of a passion for innovation and a drive to solve real-world problems, our mission is simple: to empower individuals, startups, and businesses with smart, seamless, and scalable digital solutions.

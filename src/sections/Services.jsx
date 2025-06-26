@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../styles/Services.module.css';
+import WhatsAppButton from '../components/WhatsAppButton';
 
 const serviceList = [
   {
@@ -25,24 +26,15 @@ const serviceList = [
 ];
 
 const Services = () => {
-  const scrollToContact = () => {
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <section id="services" data-aos="slide-right" className={styles.services}>
+    <section id="services" data-aos="slide-right" data-aos-duration="3000" data-aos-delay="300" className={styles.services}>
       <h2>Our Services</h2>
       <div className={styles.grid}>
         {serviceList.map((service, index) => (
           <div key={index} className={styles.card}>
             <h3>{service.title}</h3>
             <p>{service.description}</p>
-            <button className={styles.ctaButton} onClick={scrollToContact}>
-              Contact Us Today
-            </button>
+            <WhatsAppButton serviceName={service.title} />
           </div>
         ))}
       </div>
