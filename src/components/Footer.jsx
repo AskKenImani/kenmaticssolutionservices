@@ -18,13 +18,13 @@ const Footer = () => {
     <footer className={styles.footer}>
       < VisitorCounter />
       <p className={styles.time}>{currentTime}</p>
-      <div className={styles.socialIcons}>
+      <address className={styles.socialIcons}>
         <a href="https://linkedin.com/in/kehinde-imani" target="_blank" rel="noreferrer"><FaLinkedin /></a>
         <a href="https://wa.me/+2348083117154" target="_blank" rel="noreferrer"><FaWhatsapp /></a>
         <a href="https://twitter.com/@kehinde_imani" target="_blank" rel="noreferrer"><FaTwitter /></a>
         <a href="https://instagram.com/kenmano2020" target="_blank" rel="noreferrer"><FaInstagram /></a>
         <a href="https://tiktok.com/@kehindeimani" target="_blank" rel="noreferrer"><FaTiktok /></a>
-      </div>
+      </address>
       <p className={styles.time}>© 2025 Kenmatics Solution Services. All rights reserved.</p>
     </footer>
   );

@@ -10,10 +10,10 @@ const projectList = [
     reviewLink: '#reviews'
   },
   {
-    title: 'KenPortfolio — Personal Portfolio',
-    image: '/assets/projects/kenportfolio.png',
-    website: 'https://kenimaniportfolio.netlify.app/',
-    description: 'Designed and deployed a modern portfolio with dark/light mode, responsive layout, and contact form.',
+    title: 'MarydayJu Enterprises Website',
+    image: '/assets/projects/maryday.PNG',
+    website: 'https://marydayjuenterprises.com/contribution/',
+    description: 'Designed and deployed a modern website for contribution of MarydayJu Enterprises.',
     reviewLink: '#reviews'
   },
   {
